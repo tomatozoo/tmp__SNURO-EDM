@@ -1,0 +1,23 @@
+# Python 2.7.12 + Selenium 3.14 + Chrome
+docker pull selenium/standalone-chrome
+
+docker run --name my_selenium -it -p 8888:8888 -v C:\LOCAL_MACHINE_SHARE_DIR:/home/seluser selenium/standalone-chrome /bin/bash
+
+sudo apt-get update
+sudo apt-get install vim
+sudo apt-get install python-pip
+
+pip install jupyter
+pip install pandas
+
+pip install requests
+pip install xmltodict
+pip install openpyxl
+pip install pyvirtualdisplay
+pip install selenium
+pip install bs4
+pip install requests
+
+cd /home/seluser/
+export PATH=$PATH:~/.local/bin
+jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root --no-browser &
